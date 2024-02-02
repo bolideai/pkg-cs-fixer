@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "php": "^8.1",
-        "friendsofphp/php-cs-fixer": "^3.12"
+        "friendsofphp/php-cs-fixer": "^3.49"
     },
     "license": "MIT",
     "autoload": {
@@ -15,7 +15,7 @@
     "authors": [
         {
             "name": "Vitaliy Dubov",
-            "email": "vitaliy.dubov@bolide.ai"
+            "email": "vitaliy.dubov@searchanise.io"
         }
     ],
     "extra": {
@@ -26,6 +26,6 @@
         }
     },
     "require-dev": {
-        "orchestra/testbench": "^7.10"
+        "orchestra/testbench": "^7.40.1"
     }
 }

@@ -18,7 +18,7 @@ class ApplyFixer extends Command
         'routes',
     ];
 
-    protected $signature = 'cs:fix
+    protected $signature = 'bolide:cs:fix
         {folders? : Checked folders.}
     ';
 
@@ -50,11 +50,11 @@ class ApplyFixer extends Command
     private function execFixer(string $folder)
     {
         if (! is_dir($folder)) {
-            return $this->warn("The directory does not exist: $folder");
+            return $this->warn("The directory does not exist: {$folder}");
         }
 
-        $result = exec($this->fixerPath . " fix $folder/ --using-cache=no --rules='$this->rules'");
+        $result = exec($this->fixerPath . " fix $folder/ --using-cache=no --rules='{$this->rules}'");
 
-        $this->info("Folder $folder: " . $result);
+        $this->info("Folder {$folder}: " . $result);
     }
 }
