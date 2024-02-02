@@ -5,9 +5,16 @@ use PhpCsFixer\Fixer\FunctionNotation\NativeFunctionInvocationFixer;
 ini_set("memory_limit", "-1");
 
 $finder = Symfony\Component\Finder\Finder::create()
-    ->notPath('/bootstrap/*')
-    ->notPath('/storage/*')
-    ->notPath('/vendor/*')
+    ->notPath(base_path() . '/bootstrap/*')
+    ->notPath(base_path() . '/storage/*')
+    ->notPath(base_path() . '/vendor/*')
+    ->in([
+        base_path() . '/app',
+        base_path() . '/tests',
+        base_path() . '/config',
+        base_path() . '/database',
+        base_path() . '/routes',
+    ])
     ->name('*.php')
     ->notName('*.blade.php')
     ->ignoreDotFiles(true)
