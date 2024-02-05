@@ -1,8 +1,15 @@
 <?php
 
+use PhpCsFixer\Fixer\FunctionNotation\NativeFunctionInvocationFixer;
+
 return [
+    '@PSR1' => true,
     '@PSR2' => true,
     '@PSR12' => true,
+    'native_function_invocation' => [
+        'include' => [NativeFunctionInvocationFixer::SET_COMPILER_OPTIMIZED],
+        'scope' => 'namespaced',
+    ],
     'group_import' => true,
     'single_import_per_statement' => false,
     'array_syntax' => ['syntax' => 'short'],
