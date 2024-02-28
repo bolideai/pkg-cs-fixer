@@ -53,7 +53,7 @@ class ApplyFixer extends Command
             return $this->warn("The directory does not exist: {$folder}");
         }
 
-        $result = exec($this->fixerPath . " fix $folder/ --allow-risky=yes --verbose --show-progress=bar --using-cache=no --rules='{$this->rules}'");
+        $result = exec($this->fixerPath . " fix $folder/ --verbose --show-progress=bar --using-cache=no --rules='{$this->rules}'");
 
         $this->info("Folder {$folder}: " . $result);
     }
