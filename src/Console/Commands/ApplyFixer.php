@@ -24,7 +24,7 @@ class ApplyFixer extends Command
             ? 'shell_exec'
             : 'exec';
 
-        $result = $func(self::FIXER . " fix $additionalParameter app/ tests/ config/ database/ routes/ --config=\"" . __DIR__ . '/../../resources/.php-cs-fixer.dist.php'. '"');
+        $result = $func(self::FIXER . " fix $additionalParameter app/ tests/ config/ database/ routes/ --config=\"" . __DIR__ . '/../../resources/fixer.config.php'. '"');
 
         $this->info($result);
     }
